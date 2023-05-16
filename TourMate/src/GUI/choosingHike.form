@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.choosingHike">
+  <grid id="27dc6" binding="choosePanel" layout-manager="GridLayoutManager" row-count="8" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="30" bottom="20" right="30"/>
+    <constraints>
+      <xy x="77" y="20" width="600" height="423"/>
+    </constraints>
+    <properties>
+      <background color="-11300507"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="35e76" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="20" style="1"/>
+          <text value="New Hike"/>
+        </properties>
+      </component>
+      <component id="352fb" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="14" style="1"/>
+          <text value="Choose your preferences down bellow !"/>
+        </properties>
+      </component>
+      <component id="2f289" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Difficulty"/>
+        </properties>
+      </component>
+      <component id="170e0" class="javax.swing.JCheckBox" binding="cbLight">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Light"/>
+        </properties>
+      </component>
+      <component id="aaf2a" class="javax.swing.JCheckBox" binding="cbMedium">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Medium"/>
+        </properties>
+      </component>
+      <component id="6ff97" class="javax.swing.JCheckBox" binding="cbDifficult">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Difficult"/>
+        </properties>
+      </component>
+      <component id="ecb3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="With guide"/>
+        </properties>
+      </component>
+      <component id="23a9a" class="javax.swing.JCheckBox" binding="cbYesGuide">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Yes"/>
+        </properties>
+      </component>
+      <component id="39b4b" class="javax.swing.JCheckBox" binding="cbNoGuide">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="No"/>
+        </properties>
+      </component>
+      <component id="dda2d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Distance (km)"/>
+        </properties>
+      </component>
+      <component id="970b0" class="javax.swing.JCheckBox" binding="cbShort">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="0 - 5 km"/>
+        </properties>
+      </component>
+      <component id="1865e" class="javax.swing.JCheckBox" binding="cbMiddle">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="5 - 10 km"/>
+        </properties>
+      </component>
+      <component id="f88cc" class="javax.swing.JCheckBox" binding="cbLong">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="10+ km"/>
+        </properties>
+      </component>
+      <component id="51ea9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Time (hours)"/>
+        </properties>
+      </component>
+      <component id="a1e7" class="javax.swing.JCheckBox" binding="cbHour">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="0 - 1 h"/>
+        </properties>
+      </component>
+      <component id="22535" class="javax.swing.JCheckBox" binding="cbTwoHours">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="1 - 2 h"/>
+        </properties>
+      </component>
+      <component id="3ff3c" class="javax.swing.JCheckBox" binding="cbMoreHours">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="2+ h"/>
+        </properties>
+      </component>
+      <component id="e48d4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Accomodation"/>
+        </properties>
+      </component>
+      <component id="19fdf" class="javax.swing.JCheckBox" binding="cbHotel">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Hotel"/>
+        </properties>
+      </component>
+      <component id="1dcf6" class="javax.swing.JCheckBox" binding="cbStayNight">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Stay night"/>
+        </properties>
+      </component>
+      <component id="32118" class="javax.swing.JCheckBox" binding="cbSleepAndEat">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-11300507"/>
+          <font name="Verdana" size="13" style="1"/>
+          <text value="Night + bufet"/>
+        </properties>
+      </component>
+      <component id="2f737" class="javax.swing.JButton" binding="btnSearch">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Search"/>
+        </properties>
+      </component>
+      <component id="47787" class="javax.swing.JButton" binding="btnCancel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
