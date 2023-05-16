@@ -1,0 +1,13 @@
+(A)A*B+C*D BDDNode@4eec7777
+├──(C)C*D BDDNode@7699a589
+│  ├──(0)0 BDDNode@58372a00
+│  └──(D)D BDDNode@4dd8dc3
+│     ├──(0)0 BDDNode@58372a00
+│     └──(1)1 BDDNode@6d03e736
+└──(B)B+C*D BDDNode@568db2f2
+   ├──(C)C*D BDDNode@7699a589
+   │  ├──(0)0 BDDNode@58372a00
+   │  └──(D)D BDDNode@4dd8dc3
+   │     ├──(0)0 BDDNode@58372a00
+   │     └──(1)1 BDDNode@6d03e736
+   └──(1)1 BDDNode@6d03e736
