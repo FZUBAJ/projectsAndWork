@@ -1,0 +1,149 @@
+name: TZIV_PROJEKT_OBRÁZKY
+source code: |-
+  input: '111_100_110_H$'
+  blank: ' '
+  start state: start
+  table:
+    start:
+      [1,0,_]: R
+      I: {L: find_first_Invert}
+      H: {L: back_Horizontal}
+      S: {L: back_Stlpce}
+      
+    find_first_Invert:
+      [1,0,_, $, I]: L
+      [' ', J, N, U]: {R: first_check_Invert}
+    
+    first_check_Invert:
+      1: {write: J, R: write_zero_Invert}
+      0: {write: N, R: write_one_Invert}
+      _: {write: U, R: check_underscore_Invert}
+      
+    check_underscore_Invert:
+      [1, 0, J, N]: {R: write_underscore_Invert}
+      I: {R: final}
+    
+    write_zero_Invert:
+      [1, 0, _, $, I]: R
+      ' ': {write: 0, L: find_first_Invert}
+    
+    write_one_Invert:
+      [1, 0, _, $, I]: R
+      ' ': {write: 1, L: find_first_Invert}
+    write_underscore_Invert:
+      [1, 0, _, $, I]: R
+      ' ': {write: _, L: find_first_Invert}
+      
+    back_Horizontal:
+      _: {write: U, L: return_Horizontal}
+    
+    get_to_middle_Horizontal:
+      [1,0,_,$]: L
+      H: {L: return_Horizontal}
+    
+    return_Horizontal:
+      [1,0,U, J, N]: L
+      _: {R: writing_Horizontal}
+      ' ': {R: writing_Horizontal}
+    
+    writing_Horizontal:
+      [J,N]: R
+      1: {write: J, R: write_one_Horizontal}
+      0: {write: N, R: write_zero_Horizontal}
+      U: {L: find_underscore_Horizontal}
+      
+    find_underscore_Horizontal:
+      [J,N, U]: L
+      _: {write: U, R: write_underscore_Horizontal}
+      ' ': {R: final}
+      
+    write_one_Horizontal:
+      [1,0,U,J,N, H, $,_]: R
+      ' ': {write: 1, L: get_to_middle_Horizontal}
+      
+    write_zero_Horizontal:
+      [1,0,U,J,N, H, $,_]: R
+      ' ': {write: 0, L: get_to_middle_Horizontal}
+    
+    write_underscore_Horizontal:
+      [1,0,U,J,N, H, $,_]: R
+      ' ': {write: _, L: get_to_middle_Horizontal}
+    
+    back_Stlpce:
+      [1, 0, _, j, n, J,N]: L
+      ' ': {R: signing_Stlpce}
+    
+    signing_Stlpce:
+      [J,N]: R
+      1: {write: j, R: next_Stlpce}
+      0: {write: n, R: next_Stlpce}
+      S: {L: back_1_Stlpce}
+      
+    next_Stlpce: 
+      [1,0,j,n,J,N]: R
+      _: {R: signing_Stlpce}
+    
+    find_S_Stlpce:
+      [0,1,_, $]: L
+      S: {L: back_1_Stlpce}
+      
+    find_S_again_Stlpce:
+      [0,1,_, $]: L
+      S: {L: back_Stlpce}
+      
+    back_1_Stlpce:
+      [1, 0, _, j, n, J, N]: L
+      ' ': {R: writing_Stlpce}
+    
+    writing_Stlpce:
+      [J,N, 0, 1,_]: R
+      j: {write: J, R: writing_one_Stlpce}
+      n: {write: N, R: writing_null_Stlpce}
+      S: {L: checking_Stlpce}
+      
+    checking_Stlpce:
+      _: L
+      [1, 0]: {R: write_underscore_Stlpce}
+      [J, N]: {R: final}
+      
+    write_underscore_Stlpce:
+      [1,0,n,N,j,J,S, $, _]: R
+      ' ': {write: _, L: find_S_again_Stlpce}
+      
+    writing_one_Stlpce:
+      [1,0,n,N,j,J,S, $, _]: R
+      ' ': {write: 1, L: find_S_Stlpce}
+    
+    writing_null_Stlpce:
+      [1,0,n,N,j,J,S, $, _]: R
+      ' ': {write: 0, L: find_S_Stlpce}
+      
+    final:
+positions:
+  start: {x: 780, y: 334.93}
+  find_first_Invert: {x: 658.54, y: 37.38}
+  first_check_Invert: {x: 144.14, y: 109.25}
+  check_underscore_Invert: {x: 121.73, y: 20}
+  write_zero_Invert: {x: 237.11, y: 57.69}
+  write_one_Invert: {x: 449.81, y: 115.31}
+  write_underscore_Invert: {x: 377.35, y: 20}
+  back_Horizontal: {x: 688.97, y: 444.04}
+  get_to_middle_Horizontal: {x: 482.77, y: 415.22}
+  return_Horizontal: {x: 580.5, y: 480}
+  writing_Horizontal: {x: 172.4, y: 381.3}
+  find_underscore_Horizontal: {x: 144.47, y: 480}
+  write_one_Horizontal: {x: 466.72, y: 321.65}
+  write_zero_Horizontal: {x: 347.32, y: 398.89}
+  write_underscore_Horizontal: {x: 372.12, y: 480}
+  back_Stlpce: {x: 647.6, y: 339.69}
+  signing_Stlpce: {x: 620.53, y: 231.75}
+  next_Stlpce: {x: 582.76, y: 124.68}
+  find_S_Stlpce: {x: 301.84, y: 308.38}
+  find_S_again_Stlpce: {x: 499.2, y: 152.64}
+  back_1_Stlpce: {x: 448.19, y: 247.19, fixed: false}
+  writing_Stlpce: {x: 284.39, y: 247.56}
+  checking_Stlpce: {x: 163.36, y: 172.85, fixed: false}
+  write_underscore_Stlpce: {x: 328.58, y: 121.31, fixed: false}
+  writing_one_Stlpce: {x: 138.55, y: 319.27}
+  writing_null_Stlpce: {x: 129.88, y: 264.9}
+  final: {x: 20, y: 266.18}

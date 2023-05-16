@@ -1,0 +1,24 @@
+READ 0
+JZERO just_one_zero
+JUMP loop
+
+loop:
+	JZERO end
+	ADD 1
+	STORE 1
+	LOAD 2
+	ADD =1
+	STORE 2
+	READ 0
+	JUMP loop
+
+end:
+	WRITE 2
+	LOAD 1
+	DIV 2
+	WRITE 0
+	ACCEPT
+
+just_one_zero:
+	WRITE 0
+	ACCEPT
