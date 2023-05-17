@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"GUI"},{"l":"Logic.Hiking"},{"l":"Logic.Services"},{"l":"Logic.Thread"},{"l":"Logic.User"}];updateSearchResults();
